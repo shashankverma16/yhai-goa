@@ -21,7 +21,7 @@ const MediaDashboard = () => {
 
     try {
       // POST request to your backend to add new media
-      await axios.post('/media/news', newMedia);
+      await axios.post('https://yhai-goa-1.onrender.com/api/media/news', newMedia);
       setSuccessMessage('Media added successfully!');
       setTitle('');
       setImage('');
