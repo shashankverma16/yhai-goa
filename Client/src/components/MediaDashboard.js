@@ -21,12 +21,13 @@ const MediaDashboard = () => {
 
     try {
       // POST request to your backend to add new media
-      await axios.post('https://yhai-goa-1.onrender.com/api/media/news', newMedia);
+      await axios.post('api/media/news', newMedia);
       setSuccessMessage('Media added successfully!');
       setTitle('');
       setImage('');
       setSummary('');
       setContent('');
+      console.log("Inside try fucntion of add media")
     } catch (error) {
       console.error('Error adding media:', error);
     }
