@@ -10,7 +10,7 @@ const MediaPage = () => {
     // Fetch media articles from the API (corrected API endpoint)
     const fetchArticles = async () => {
       try {
-        const response = await axios.get('https://yhai-web.vercel.app/api/media'); // Corrected endpoint
+        const response = await axios.get('https://yhai-goa-1.onrender.com/api/media'); // Corrected endpoint
         setArticles(response.data);
       } catch (error) {
         console.error('Error fetching articles:', error);
