@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 
 // ✅ Enable CORS to allow requests from your React app
 app.use(cors({
-    origin: 'https://yhai-goa.vercel.app/', // change this to your React app's address
+    origin: 'https://yhai-goa.vercel.app', // change this to your React app's address
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
