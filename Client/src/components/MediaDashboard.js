@@ -21,7 +21,7 @@ const MediaDashboard = () => {
 
     try {
       // POST request to your backend to add new media
-      await axios.post('api/media/news', newMedia);
+      await axios.post('/media/news', newMedia);
       setSuccessMessage('Media added successfully!');
       setTitle('');
       setImage('');
