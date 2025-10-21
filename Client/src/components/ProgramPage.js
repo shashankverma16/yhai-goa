@@ -27,7 +27,7 @@ function ProgramPage() {
    useEffect(() => {
   const fetchPrograms = async () => {
     try {
-      const response = await axios.get('https://yhai-web.vercel.app/api/programs');
+      const response = await axios.get('https://yhai-goa-1.onrender.com/api/programs');
       
       // Ensure response.data is an array before sorting
       if (Array.isArray(response.data)) {
