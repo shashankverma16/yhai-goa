@@ -132,3 +132,23 @@ app.get('/api/media', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch articles' });
   }
 });
+
+// Add new media article
+app.post('/api/media/news', async (req, res) => {
+  try {
+    const { title, image, summary, content } = req.body;
+
+    const newMedia = new Media({
+      title,
+      image,
+      summary,
+      content
+    });
+
+    await newMedia.save();
+    res.status(201).json({ message: 'Media added successfully!', data: newMedia });
+  } catch (err) {
+    console.error('Error adding media:', err.message);
+    res.status(500).json({ error: 'Failed to add media' });
+  }
+});
