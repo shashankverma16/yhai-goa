@@ -26,7 +26,7 @@ const ProgramSection = () => {
     // Fetch programs from the backend API
     const fetchPrograms = async () => {
       try {
-        const response = await axios.get('/api/programs');
+        const response = await axios.get('https://yhai-goa-1.onrender.com/api/programs');
         const sortedPrograms = response.data.sort((a, b) => new Date(b._id) - new Date(a._id));
         setPrograms(sortedPrograms);
       } catch (error) {
